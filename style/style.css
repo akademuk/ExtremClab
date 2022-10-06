@@ -894,4 +894,7 @@ header {
 .menuForm input {
     width: 100%;
 }
+.popupContent p:nth-of-type(2) {
+    width: 50%;
+}
 }
