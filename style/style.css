@@ -897,4 +897,31 @@ header {
 .popupContent p:nth-of-type(2) {
     width: 50%;
 }
+main {
+    margin-top: -100px;
+}
+.card {
+    padding-top: 100px;
+}
+h2 {
+    padding-left: 0;
+    margin-bottom: 64px;
+}
+.cardContainerInfo > p {
+    padding: 4px 8px;
+    background: #248F7E;
+    opacity: 0.75;
+}
+.btnMobile {
+    width: 100%;
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+}
+.cardinfo {
+    padding: 0 8px 32px 8px;
+}
+.topContainerMain {
+    padding-right: 0;
+}
 }
