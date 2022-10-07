@@ -488,6 +488,11 @@ h3 {
     z-index: 10;
     display: none;
 }
+.card .wrapper h2 {
+    max-width: 1312px;
+    width: 100%;
+    margin: 0 auto 72px auto;
+}
 .birger-button {
     position: absolute;
     top: 10px;
@@ -885,7 +890,7 @@ h3 {
     opacity: 0.05;
     position: absolute;
     top: 25%;
-    right: -15%;
+    right: 10%;
     width: max-content;
     z-index: -1;
 }
@@ -896,6 +901,150 @@ h3 {
     object-fit: contain;
     max-width: 100%;
     z-index: -1;
+}
+.media {
+   padding-left: 4.5vw;
+   width: 100%;
+   padding-bottom: 45px;
+   position: relative;
+}
+.slider {
+    padding-bottom: 100px;
+    overflow: hidden;
+}
+.slick-slide {
+    margin: 0 12px;
+}
+.slick-slide:nth-last-of-type(1) {
+    margin-left: 0 !important;
+}
+.slider h2 {
+    max-width: 1312px;
+    width: 100%;
+    margin-left: 4.5vw;
+    margin-bottom: 72px;
+}
+.slick-next.slick-arrow{
+    display: block;
+    background: url('../img/right.svg'),transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: transparent;
+    border: none;
+    position: absolute;
+    right: 40%;
+    bottom: 38px;
+}
+.slick-prev.slick-arrow{
+    display: block;
+    background: url('../img/left.svg'),transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: transparent;
+    border: none;
+    position: absolute;
+    left: 45%;
+    bottom: 38px;
+}
+.slick-dots {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    margin: 45px auto 0 auto;
+}
+.slick-dots li {
+    display: flex;
+}
+.mediaContainer {
+    width: 310px;
+    height: 310px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    position: relative;
+    border-radius: 24px;
+}
+.mediaContainer::after {
+    content: "";
+    background: url(../img/play.png);
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.mediaContainer:nth-last-of-type(3):after {
+    content: "";
+    background: url(../img/SmallPlay.png);
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.mediaContainer:nth-last-of-type(4):after {
+    content: "";
+    background: url(../img/SmallPlay.png);
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.slick-dots .slick-active {
+    width: 34px !important;
+    border: none;
+    height: 6px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin-right: 7px;
+}
+.slick-dots li button{
+    width: 8px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin-right: 7px;
+    border: none;
+    color: transparent;
+}
+.mediaContainer img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.slick-slide {padding: 0 15px;}
+.mediaContainer:nth-of-type(1) {
+    background: linear-gradient(180deg, rgba(229, 140, 143, 0.75) 0%, rgba(45, 179, 157, 0.75) 100%), url(../img/video1.png);
+    background-blend-mode: hue;
+}
+.mediaContainer:nth-of-type(2) {
+    background: linear-gradient(180deg, rgba(229, 140, 143, 0.75) 0%, rgba(45, 179, 157, 0.75) 100%), url(../img/video2.png);
+    background-blend-mode: hue;
+}
+.mediaContainer:nth-of-type(3) {
+    background: linear-gradient(180deg, rgba(229, 140, 143, 0.75) 0%, rgba(45, 179, 157, 0.75) 100%), url(../img/video3.png);
+    background-blend-mode: hue;
+}
+.mediaContainer:nth-of-type(4) {
+    background: linear-gradient(180deg, rgba(229, 140, 143, 0.75) 0%, rgba(45, 179, 157, 0.75) 100%), url(../img/video4.png);
+    background-blend-mode: hue;
+}
+.mediaContainer:nth-of-type(5) {
+    background: linear-gradient(180deg, rgba(229, 140, 143, 0.75) 0%, rgba(45, 179, 157, 0.75) 100%), url(../img/video1.png);
+    background-blend-mode: hue;
+}
+.mediaContainer:nth-of-type(6) {
+    background: linear-gradient(180deg, rgba(229, 140, 143, 0.75) 0%, rgba(45, 179, 157, 0.75) 100%), url(../img/video2.png);
+    background-blend-mode: hue;
+}
+.mediaContainer:nth-of-type(7) {
+    background: linear-gradient(180deg, rgba(229, 140, 143, 0.75) 0%, rgba(45, 179, 157, 0.75) 100%), url(../img/video3.png);
+    background-blend-mode: hue;
 }
 @media (max-width:1440px) {
 .card > .wrapper::before {
@@ -1261,6 +1410,7 @@ h2 {
 }
 .burgerLogo {
     margin-bottom: 50px;
+    height: auto !important;
 }
 header {
     padding-top: 13px;
@@ -1342,6 +1492,12 @@ header {
 .stagesContainer:nth-of-type(1) img {
     width: 150px;
     height: 120px;
+}
+.menu.open-menu .socialIcon {
+    width: 40%;
+}
+.menu.open-menu {
+    padding: 13px 20px;
 }
 }
 @media (max-width: 374px) {
