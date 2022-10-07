@@ -1108,6 +1108,73 @@ h3 {
     color: #FFFFFF;
     margin-top: 16px;
 }
+.equipment .wrapper {
+    max-width: 1315px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 150px;
+    overflow: hidden;
+}
+.equipmentVest,
+.equipmentBoard {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 100%;
+    padding: 0 50px;
+    flex-wrap: wrap;
+}
+.equipmentBoard {
+    margin-top: 130px;
+}
+.equipmentBoardContainer img,
+.equipmentVestContainer img {
+    max-width: 200px;
+}
+.equipmentBoardContainer:hover,
+.equipmentVestContainer:hover {
+   transform: scale(1.5);
+   transition: all 2s;
+   cursor: pointer;
+}
+.equipmentBoardContainer:hover img,
+.equipmentVestContainer:hover img{
+   transform: rotate(-15deg);
+   transition: all 2s;
+}
+.equipmentTittle {
+    position: absolute;
+    top: -100px;
+    right: 0;
+    font-family: 'Molle';
+    font-weight: 400;
+    font-size: 150px;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    mix-blend-mode: soft-light;
+    opacity: 0.25;
+}
+.equipmentVestContainer,
+.equipmentBoardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15%;
+}
+.equipmentVestContainer p,
+.equipmentBoardContainer p {
+    margin-top: 24px;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
 @media (max-width:1440px) {
 .card > .wrapper::before {
     right: -19%;
@@ -1145,8 +1212,19 @@ h3 {
 .aboutPosition2 {
     font-size: 180px;
 }
+.equipment .wrapper {
+    width: 90%;
+}
 }
 @media (max-width: 1200px) {
+.equipmentVestContainer {
+    width: 250px;
+    margin-bottom: 20px;
+}
+.equipmentBoardContainer {
+    width: 250px;
+    margin-bottom: 20px;
+}
 header > .navigaton {
     display: none;
 }
@@ -1217,6 +1295,9 @@ content: none;
 .aboutPosition {
     font-size: 150px;
 }
+.equipmentTittle {
+    font-size: 100px;
+}
 .aboutPosition2 {
     font-size: 100px;
     margin-top: 0;
@@ -1246,6 +1327,14 @@ content: none;
 @media (max-width: 768px) {
 .card > .wrapper {
     width: 90%;
+}
+.equipmentVestContainer {
+    width: 165px;
+    margin-bottom: 20px;
+}
+.equipmentBoardContainer {
+    width: 165px;
+    margin-bottom: 20px;
 }
 .cardContainerInfo {
     width: 45%;
@@ -1297,6 +1386,9 @@ content: none;
 .slick-next.slick-arrow {
     right: 25%;
 }
+.equipmentTittle {
+    font-size: 90px;
+}
 }
 @media(max-width: 576px) {
 .background {
@@ -1305,6 +1397,17 @@ content: none;
     background-size: cover;
     background-position-y: -45px;
     height: 90vh;
+}
+.equipmentVest {
+    padding: 0;
+    justify-content: center;
+}
+.equipmentBoard {
+    padding: 0;
+    justify-content: center;
+}
+.equipmentTittle {
+    font-size: 55px;
 }
 .aboutPosition {
     font-size: 90px;
