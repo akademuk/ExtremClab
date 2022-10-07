@@ -1046,6 +1046,68 @@ h3 {
     background: linear-gradient(180deg, rgba(229, 140, 143, 0.75) 0%, rgba(45, 179, 157, 0.75) 100%), url(../img/video3.png);
     background-blend-mode: hue;
 }
+.aboutAs {
+    height: 500px;
+    position: relative;
+}
+.aboutAs .wrapper{
+    max-width: 1312px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.aboutAsContainer {
+    width: 50%;
+    margin: 0 auto;
+}
+.aboutPositionCentr {
+    position: absolute;
+    z-index: -1;
+    top: 33%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.aboutPosition {
+    font-family: 'Molle';
+    font-weight: 400;
+    font-size: 338.089px;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    mix-blend-mode: soft-light;
+    opacity: 0.25;
+    transform: rotate(-5.77deg);
+}
+.aboutPosition2 {
+    font-family: 'Molle';
+    font-weight: 400;
+    font-size: 203.595px;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    mix-blend-mode: soft-light;
+    opacity: 0.25;
+    transform: rotate(-5deg);
+    margin-top: -80px;
+}
+.aboutAsContainer p:nth-of-type(1) {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+.aboutAsContainer p:nth-of-type(2) {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: right;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    margin-top: 16px;
+}
 @media (max-width:1440px) {
 .card > .wrapper::before {
     right: -19%;
@@ -1074,10 +1136,26 @@ h3 {
 .positionNumber {
     right: 0;
 }
+.aboutAs .wrapper {
+    width: 90%;
+}
+.aboutPosition {
+    font-size: 300px;
+}
+.aboutPosition2 {
+    font-size: 180px;
+}
 }
 @media (max-width: 1200px) {
 header > .navigaton {
     display: none;
+}
+.aboutPosition {
+    font-size: 200px;
+}
+.aboutPosition2 {
+    font-size: 150px;
+    width: max-content;
 }
 header > .toggle {
     display: none;
@@ -1136,6 +1214,16 @@ content: none;
 }
 }
 @media (max-width: 992px) {
+.aboutPosition {
+    font-size: 150px;
+}
+.aboutPosition2 {
+    font-size: 100px;
+    margin-top: 0;
+}
+.aboutAsContainer {
+    width: 70%;
+}
 .stagesContainer p:nth-of-type(1) {
     font-size: 20px;
 }
@@ -1217,6 +1305,27 @@ content: none;
     background-size: cover;
     background-position-y: -45px;
     height: 90vh;
+}
+.aboutPosition {
+    font-size: 90px;
+    margin-top: 100px;
+}
+.aboutPosition2 {
+    font-size: 50px;
+    margin-top: 0;
+}
+.aboutPositionCentr {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.aboutAs .wrapper {
+    width: 100%;
+    padding: 0 16px;
+}
+.aboutAsContainer {
+    width: 100%;
 }
 .mediaContainer  {
     width: 164px;
@@ -1572,5 +1681,17 @@ h2 {
 .topContainerMain > button {
     font-size: 18px;
     line-height: 100%;
+}
+.aboutPosition {
+    font-size: 50px;
+    margin-top: 100px;
+}
+.aboutPosition2 {
+    font-size: 30px;
+    margin-top: 0;
+}
+.aboutAs {
+    height: 100%;
+    padding-bottom: 50px;
 }
 }
