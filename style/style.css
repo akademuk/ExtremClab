@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Molle';
+    src: url(../fonts/Molle-Regular.ttf);
+}
 body {
     font-family: 'Fira Sans Extra Condensed', sans-serif;
 }
@@ -8,7 +12,7 @@ body {
     box-sizing: border-box;
 }
 .wrapper {
-    width: 80%;
+    width: 100%;
     position: relative;
 }
 main {
@@ -39,7 +43,6 @@ h2 {
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 72px;
-    padding-left: 64px;
 }
 .logo {
     width: 110px;
@@ -203,10 +206,10 @@ header {
     content: "";
     background: url(../img/cityLeft.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     background-position: center;
     position: absolute;
-    left: -25%;
+    left: -6%;
     top: 18%;
     width: 29%;
     height: 510px;
@@ -217,10 +220,10 @@ header {
     content: "";
     background: url(../img/cityRight.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     background-position: center;
     position: absolute;
-    right: -25%;
+    right: -6%;
     top: 18%;
     width: 29%;
     height: 510px;
@@ -228,7 +231,7 @@ header {
     z-index: -1;
 }
 .cardContainer {
-    max-width: 1440px;
+    max-width: 1312px;
     width: 100%;
     height: auto;
     display: flex;
@@ -237,7 +240,6 @@ header {
     margin: 0 auto 100px auto;
 }
 .cardContainerInfo {
-    width:24%;
     max-width: 310px;
     height: 500px;
     box-sizing: border-box;
@@ -740,9 +742,10 @@ h3 {
      margin-bottom: 16px;
 }
 .groupTrainings {
-    display: flex;
-    width: 80%;
+    max-width: 1312px;
+    width: 100%;
     margin: 0 auto;
+    display: flex;
 }
 .groupTrainingsLeft {
     width: 50%;
@@ -830,19 +833,98 @@ h3 {
     letter-spacing: 1px;
     color: #FFFFFF;
 }
-@media (min-width:1780px) {
-    .card .wrapper {
-        width: 1440px;
-    }
-    .groupTrainings {
-        width: 1440px;
-    }
+.stagesOfWork {
+    margin-top: 50px
+}
+.stagesOfWork .wrapper {
+    max-width: 1312px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+}
+.stagesOfWork .wrapper h2 {
+    position: absolute;
+    top: 85px;
+    left: 0;
+}
+.stagesContainer {
+    height: 550px;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding-right: 20px;
+}
+.stagesContainer p:nth-of-type(1) {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 140%;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+.stagesContainer p:nth-of-type(2) {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    margin-top: 32px;
+}
+.positionNumber {
+    font-family: 'Molle';
+    font-weight: 400;
+    font-size: 500px;
+    line-height: 70%;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    opacity: 0.05;
+    position: absolute;
+    top: 25%;
+    right: -15%;
+    width: max-content;
+    z-index: -1;
+}
+.stagesContainer img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: contain;
+    max-width: 100%;
+    z-index: -1;
+}
+@media (max-width:1440px) {
+.card > .wrapper::before {
+    right: -19%;
+}
+.card > .wrapper::after {
+    left: -19%;
+}
 }
 @media(max-width:1350px) {
     .navigaton li a {
         margin-right: 16px;
         font-size: 15px;
     }
+    .cardContainerInfo {
+        width: 24%;
+    }
+    .card .wrapper {
+        width: 90%;
+    }
+.groupTrainings {
+    width: 90%;
+}
+.stagesOfWork .wrapper {
+    width: 90%;
+}
+.positionNumber {
+    right: 0;
+}
 }
 @media (max-width: 1200px) {
 header > .navigaton {
@@ -850,6 +932,9 @@ header > .navigaton {
 }
 header > .toggle {
     display: none;
+}
+.cardContainerInfo {
+    background-size: cover !important;
 }
 .box-container {
     display: block;
@@ -879,6 +964,35 @@ content: none;
 .groupTrainingsRight {
     width: 100%;
 }
+.cardContainer {
+    margin-bottom: 0;
+}
+.groupTrainings {
+    width: 90%;
+}
+.positionNumber {
+    font-size: 300px;
+}
+.stagesContainer img {
+    left: -50px;
+}
+.stagesContainer p:nth-of-type(2) {
+    min-height: 100px;
+}
+}
+@media (max-width: 992px) {
+.stagesContainer p:nth-of-type(1) {
+    font-size: 20px;
+}
+.stagesContainer p:nth-of-type(2) {
+    font-size: 12px;
+}
+.stagesContainer {
+    height: 400px;
+}
+.stagesOfWork .wrapper h2 {
+    top: 0;
+}
 }
 @media (max-width: 768px) {
 .card > .wrapper {
@@ -891,6 +1005,39 @@ content: none;
 .book-now {
     width: 40%;
 }
+.groupTrainings {
+    width: 90%;
+}
+.groupTrainingsLeft {
+    margin-right: 0 !important;
+}
+.stagesOfWork .wrapper {
+    flex-direction: column;
+    align-items: center;
+}
+.stagesContainer {
+    width: 100%;
+    height: 300px;
+}
+.stagesContainer img {
+    left: 0;
+    top: 10%;
+}
+.stagesContainer p:nth-of-type(1) {
+    font-size: 28px;
+}
+.stagesContainer p:nth-of-type(2) {
+    font-size: 16px;
+    width: 90%;
+}
+.stagesContainer:nth-of-type(1) {
+    margin-top: 50px;
+}
+.stagesContainer:nth-of-type(2) img {
+    right: 20%;
+    left: auto;
+    top: -18%;
+}
 }
 @media(max-width: 576px) {
 .background {
@@ -900,7 +1047,41 @@ content: none;
     background-position-y: -45px;
     height: 90vh;
 }
-
+.stagesContainer {
+    height: 200px;
+}
+.stagesOfWork .wrapper h2 {
+    top: -50px;
+}
+.stagesContainer:nth-of-type(2) img {
+    left: 0 !important;
+    right: auto;
+    top: 10%;
+}
+.stagesContainer:nth-of-type(1) .positionNumber {
+    right: 30%;
+    top: 0;
+}
+.stagesContainer:nth-of-type(2) .positionNumber {
+    right: 15%;
+    top: 0;
+}
+.stagesContainer:nth-of-type(3) .positionNumber {
+    right: 47%;
+    top: 0;
+}
+.stagesContainer p:nth-of-type(1) {
+    width: 70%;
+}
+.positionNumber {
+    font-size: 100px;
+}
+.stagesContainer {
+    padding-left: 65px;
+}
+.stagesContainer img {
+    max-width: 200px;
+}
 .topContainerMain  {
     height: 130%;
     justify-content: center;
@@ -952,21 +1133,24 @@ header {
     align-items: center;
 }
 .cardContainerInfo {
-    width: 100%;
-    height: 350px;
-    background-size: cover !important;
+    width: 164px;
+    max-width: 164px;
+    min-width: 164px;
+    box-sizing: border-box;
+    height: 238px;
+    background-size: contain !important;
     background-repeat: no-repeat !important;
-    background-position: top !important;
+    background-position: center !important;
     box-sizing: border-box !important;
     background-blend-mode: luminosity;
     filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.4));
+    margin-right: 16px;
 }
 .cardContainer .cardContainerInfo:nth-of-type(1) {
     background: url(../img/mobile/card1.png);
 }
 .cardContainer .cardContainerInfo:nth-of-type(2) {
-    background: url(../img/mobile/card2.png);
-    
+    background: url(../img/mobile/card2.png);  
 }
 .cardContainer .cardContainerInfo:nth-of-type(3) {
     background: url(../img/mobile/card3.png);
@@ -974,7 +1158,6 @@ header {
 }
 .cardContainer .cardContainerInfo:nth-of-type(4) {
     background: url(../img/mobile/card4.png);
-    
 }
 .btnMobile {
     display: flex;
@@ -1086,8 +1269,26 @@ header {
     padding: 11px 47px;
 }
 .groupTrainingsLeft img {
-    max-width: 75%;
-    height: 200px;
+    max-width: 100%;
     object-fit: contain;
+    text-align: left;
+}
+.cardContainer {
+    margin-bottom: 64px;
+}
+.groupTrainings {
+    width: 90%;
+}
+}
+@media (max-width: 400px) {
+.cardContainer {
+    flex-direction: column;
+    align-items: center;
+}
+.stagesContainer {
+    height: 250px;
+}
+.stagesContainer .positionNumber {
+    right: 20% !important;
 }
 }
