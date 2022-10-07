@@ -1128,6 +1128,12 @@ content: none;
 .stagesContainer p:nth-of-type(2) {
     min-height: 100px;
 }
+.slick-next.slick-arrow {
+    right: 35%;
+}
+.slick-prev.slick-arrow {
+    left: 40%;
+}
 }
 @media (max-width: 992px) {
 .stagesContainer p:nth-of-type(1) {
@@ -1141,6 +1147,12 @@ content: none;
 }
 .stagesOfWork .wrapper h2 {
     top: 0;
+}
+.slick-prev.slick-arrow {
+    left: 35%;
+}
+.slick-next.slick-arrow {
+    right: 30%;
 }
 }
 @media (max-width: 768px) {
@@ -1187,6 +1199,16 @@ content: none;
     left: auto;
     top: -18%;
 }
+.media {
+    width: 100%;
+    padding: 0 16px 45px 16px;
+}
+.slick-prev.slick-arrow {
+    left:  25%;
+}
+.slick-next.slick-arrow {
+    right: 25%;
+}
 }
 @media(max-width: 576px) {
 .background {
@@ -1195,6 +1217,20 @@ content: none;
     background-size: cover;
     background-position-y: -45px;
     height: 90vh;
+}
+.mediaContainer  {
+    width: 164px;
+    height: 164px;
+}
+.slick-prev.slick-arrow {
+    left: 16px;
+    width: 25px;
+    height: 18px;
+}
+.slick-next.slick-arrow {
+    right: 16px;
+    width: 25px;
+    height: 18px;
 }
 .stagesContainer {
     height: 230px;
