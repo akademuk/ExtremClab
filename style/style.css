@@ -16,9 +16,10 @@ body {
     position: relative;
 }
 main {
-    background: url(../img/2.png),url(../img/1.png);
+    /* background: url(../img/2.png),url(../img/1.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background: yellowgreen;
     position: relative;
     z-index: 1;
     min-width: 100%;
@@ -35,7 +36,7 @@ main {
     z-index: -1;
 } */
 .mainPosition {
-    background:url(../img/Texture.png);
+    /* background:url(../img/Texture.png); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
