@@ -897,7 +897,7 @@ h3 {
     background: url(../img/Slice4.png); 
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     position: relative;
     z-index: 1;
 }
@@ -979,7 +979,7 @@ h3 {
     background: url(../img/Slice5.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
 }
 .slider::after {
     content: "";
@@ -1127,14 +1127,13 @@ h3 {
     background-blend-mode: hue;
 }
 .aboutAs {
-    padding-top: 150px;
+    height: 500px;
     position: relative;
     box-sizing: border-box;
-    padding-bottom: 150px;
     background: url(../img/Slice7.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
     z-index: 1;
 }
 .aboutAs .wrapper{
@@ -1177,29 +1176,21 @@ h3 {
     transform: rotate(-5deg);
     margin-top: -80px;
 }
-.aboutAsContainer p:nth-of-type(1) {
+.aboutAsContainer p {
     font-family: 'Fira Sans Extra Condensed', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 1px;
     color: #FFFFFF;
+    margin-bottom: 16px;
 }
-.aboutAsContainer p:nth-of-type(2) {
-    font-family: 'Fira Sans Extra Condensed', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 150%;
-    text-align: right;
-    letter-spacing: 1px;
-    color: #FFFFFF;
-    margin-top: 16px;
-}
+
 .equipment {
     background: url(../img/Slice8.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: top;
 }
 .slice {
     background: url(../img/Slice9.png);
@@ -1575,6 +1566,9 @@ h3 {
 .equipment .wrapper {
     width: 90%;
 }
+.topContainerMain {
+    margin-top: 0;
+}
 }
 @media (max-width: 1200px) {
 .equipmentVestContainer {
@@ -1593,7 +1587,7 @@ h3 {
     height: 1000px;
 }
 .topContainerMain > button {
-    top: 950px;
+    top: 1250px;
 }
 .equipmentBoardContainer {
     width: 250px;
@@ -1664,13 +1658,25 @@ content: none;
 .slick-prev.slick-arrow {
     left: 40%;
 }
+.background {
+    background: url(../img/1280.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card {
+    margin-top: 300px;
+}
+.topContainerMain {
+    margin-top: 400px;
+}
 }
 @media (max-width: 992px) {
 .topContainerMain {
     height: auto;
 }
 .topContainerMain > button {
-    top: 650px;
+    top: 520px;
 }
 .aboutPosition {
     font-size: 150px;
@@ -1797,10 +1803,13 @@ content: none;
     background-position: bottom;
 }
 .background {
-    background: url(../img/1280.png);
+    background: url(../img/992.png);
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.topContainer {
+    height: 500px;
 }
 }
 @media (max-width: 768px) {
@@ -1903,9 +1912,9 @@ main::after {
     background-position: top;
 }
 .background {
-    background: url(../img/mobile/MainArt2.png);
+    background: url(../img/mobile/768.png);
     background-position: top;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 .topContainer  {
@@ -1914,14 +1923,12 @@ main::after {
     z-index: 1;
 }
 .topContainerMain > button {
-    top: 95vh;
+    top: 400px;
 }
 .card {
     padding-top: 100px;
-    background: url(../img/Slice2.png);
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;  
+    margin-top: 100px;
+    background: transparent;
     height: max-content;
     min-height: 100%;
 }
@@ -1929,26 +1936,25 @@ main::after {
 @media(max-width: 576px) {
 .background {
     height: max-content;
-    background: url(../img/mobile/MainArt2.png);
+    background: url(../img/mobile/576.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: top;
     display: block;
+    min-height: 1400px;
 }
 .topContainerMain > button {
-    top: 75vh;
+    top: 400px;
     bottom: auto;
 }
 .card {
-    background: url(../img/Slice2.png);
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;  
+    background: transparent;
+    margin-top: 0;
     height: max-content;
     min-height: 100%;
 }
 .topContainer {
-    height: 60vh;
+    height: 465px;
 }
 .slider h2 {
     margin-bottom: 64px;
@@ -2003,9 +2009,6 @@ main::after {
 .equipmentVest {
     padding: 0;
     justify-content: center;
-}
-.topContainerMain > button {
-    bottom: 2vh;
 }
 .equipmentBoard {
     padding: 0;
@@ -2384,11 +2387,6 @@ header {
     flex-direction: column;
     align-items: center;
 }
-.background {
-    height: 100vh;
-    background: url(../img/mobile/MainArt.png);
-    background-size: cover;
-}
 .stagesContainer {
     height: 250px;
 }
@@ -2436,15 +2434,6 @@ h2 {
 .card::after {
    content: none;
 }
-.topContainerMain {
-    height: 85vh !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.topContainerMain > button {
-    bottom: 2vh !important;
-}
 .aboutPosition {
     margin-top: 150px;
 }
@@ -2461,19 +2450,20 @@ h2 {
     background-position: center;
 }
 .background {
-    background: url(../img/mobile//MainArt.png);
+    background: url(../img/mobile/375.png);
     height: 1890px;
     background-position: top;
     background-repeat: no-repeat;
 }
-.card {
-    background: url(../img/Slice2.png);
-    background-position: top;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 .topContainerMain > button {
-    top: 97vh;
+    top: 470px;
     bottom: auto;
+}
+.card {
+    background: transparent;
+    margin-top: 50px;
+}
+.topContainerMain {
+    margin-top: 100px;
 }
 }
