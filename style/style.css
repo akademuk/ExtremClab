@@ -161,9 +161,8 @@ header {
 }
 .topContainer {
     display: flex;
-    height: 75%;
-    padding-top: 35px;
-    align-items: flex-end;
+    align-items: center;
+    margin-top: 200px;
 }
 .topContainerSidebar {
     height: 100%;
@@ -792,10 +791,34 @@ h3 {
     width: 100%;
     height: 100vh;
     opacity: 0;
-    background: #000;
+    background: url(../img/popup2.png), url(../img/popup1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     pointer-events: none; 
     transition: 0.5s all;
     z-index: 100;
+}
+.closePopup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 99;
+    padding: 0 !important;
+    border: none !important;
+}
+.popup__bg::after {
+    content: "";
+    background: url(../img/popap3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: overlay;
 }
 .popup__bg.active { 
     opacity: 1;
@@ -1324,6 +1347,9 @@ h3 {
     width: 100%;
     margin: 0 auto 0 auto;
 }
+.contactUs picture img {
+    display: none;
+}
 .contactUsContent {
     width: 100%;
     height: 400px;
@@ -1851,12 +1877,11 @@ main  {
 }
 @media(max-width: 576px) {
 .background {
+    height: 100vh;
     background: url(../img/mobile/MainArt.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: -60px;
-    background-position-x: -50px;
-    height: 100vh;
+    background-size: contain;
+    background-position:center -60px;
 }
 .contactUs {
     align-items: center;
@@ -1995,7 +2020,7 @@ main::after {
     max-width: 200px;
 }
 .topContainerMain  {
-    height: 130%;
+    height: auto;
     justify-content: center;
 }
 .topContainerSidebar {
@@ -2278,14 +2303,8 @@ header {
 .stagesContainer .positionNumber {
     right: 20% !important;
 }
-.topContainer {
-    height: 43%;
-}
-.background {
-    height: 55vh;
-}
 .topContainerMain > button {
-    bottom: 12vh;
+    bottom: 20vh;
 }
 main::after {
     top: -325px;

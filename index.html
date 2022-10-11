@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="style/style.css">
     <title>Extrem Clab</title>
 </head>
-<body class="body">
+<body class="body" id="home">
     <div class="popup__bg"> 
+        <img src="img/closeIcon.png" alt="" class="close-popup closePopup">
         <div class="popup">
             <div class="popupContent">
                 <p>Thank you!</p>
@@ -29,25 +30,25 @@
             </div>
             <ul class="navigaton">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="#home">Home</a>
                 </li>
                 <li>
-                    <a href="#">About us</a>
+                    <a href="#aboutAs">About us</a>
                 </li>
                 <li>
-                    <a href="#">Services</a>
+                    <a href="#card">Services</a>
                 </li>
                 <li>
-                    <a href="#">Stages of work</a>
+                    <a href="#stagesOfWork">Stages of work</a>
                 </li>
                 <li>
-                    <a href="#">Reviews</a>
+                    <a href="#reviews">Reviews</a>
                 </li>
                 <li>
-                    <a href="#">Our equipment</a>
+                    <a href="#equipment">Our equipment</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#contactUs">Contact</a>
                 </li>
             </ul>
             <div class="toggle">
@@ -93,7 +94,7 @@
                             <a href="#">Contact</a>
                         </li>
                         <li>
-                            <a href="#">Terms of use</a>
+                            <a href="termsOfUse/index.html">Terms of use</a>
                         </li>
                         <li>
                             <a href="#">standard contract</a>
@@ -172,7 +173,7 @@
     <main>
         <!-- <img src="img/3.png" alt="" class="mainBackground"> -->
         <div class="mainPosition">
-        <div class="card">
+        <div class="card" id="card">
             <!-- <img src="img/map.png" alt="" class="mapBackground"> -->
             <div class="wrapper">
                 <h2>Services</h2>
@@ -213,7 +214,7 @@
                 </div>
             </div>
         </div>
-        <div class="groupTrainings">
+        <div class="groupTrainings" id="groupTrainings">
             <div class="groupTrainingsLeft">
                 <img src="img/groupTrainings.png" alt="">
             </div>
@@ -227,7 +228,7 @@
                 </div>
             </div>
         </div>
-        <div class="stagesOfWork">
+        <div class="stagesOfWork" id="stagesOfWork">
             <div class="wrapper">
                 <h2>Stages of work</h2>
                 <div class="stagesContainer">
@@ -250,7 +251,7 @@
                 </div>
             </div>
         </div>
-        <div class="slider">
+        <div class="slider" id="slider">
             <h2>Media reviews</h2>
             <div class="media">
                 <div class="mediaContainer">
@@ -276,8 +277,8 @@
                 </div>
               </div>
         </div>
-        <div class="reviews"></div>
-        <div class="aboutAs">
+        <div class="reviews" id="reviews"></div>
+        <div class="aboutAs" id="aboutAs">
            <div class="aboutPositionCentr">
             <p class="aboutPosition">Surfing</p>
             <p class="aboutPosition2">is our love</p>
@@ -290,7 +291,7 @@
                 </div>
             </div>
         </div>
-        <div class="equipment">
+        <div class="equipment" id="equipment">
             <div class="wrapper">
                 <h2>Our equipment</h2>
                 <div class="equipmentVest">
@@ -371,13 +372,13 @@
                 </div>
             </div>
         </div>
-        <div class="board">
+        <div class="board" id="board">
             <picture>
                 <source srcset="img/mobile/ArtFooter.png 1x" media="(max-width: 560px)">
                 <img src="img/ww.png" srcset="" alt="Вы можете получить помощь" />
             </picture>       
         </div>
-        <div class="contactUs">
+        <div class="contactUs" id="contactUs">
             <h2>Contact us</h2>
             <picture>
                 <source srcset="img/mobile/Maps.png 1x" media="(max-width: 560px)">
@@ -401,11 +402,11 @@
                 </div>
             </div>
         </div>
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <p>© 2022 Extreme 101 Club. All rights reserved. </p>
             <ul class="footerNav">
                 <li>
-                    <a href="#">Terms of use</a>
+                    <a href="termsOfUse/index.html">Terms of use</a>
                 </li>
                 <li>
                     <a href="#">standard contract</a>
