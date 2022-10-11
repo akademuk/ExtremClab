@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
     <title>Extrem Clab</title>
@@ -124,7 +124,6 @@
                 <div class="rotate">
                     <p>Follow us</p>
                 </div>
-                <!-- <img src="img/LineBox.png" alt=""> -->
                 <div class="socialIcon">
                     <a href="#">
                         <img src="img/instagram.png" alt="Instagram Extrem Clab">
@@ -174,7 +173,6 @@
         <div class="mainPosition">
         </div>
         <div class="card" id="card">
-            <!-- <img src="img/map.png" alt="" class="mapBackground"> -->
             <div class="wrapper">
                 <h2>Services</h2>
                 <div class="cardContainer">
@@ -216,7 +214,10 @@
         </div>
         <div class="groupTrainings" id="groupTrainings">
             <div class="groupTrainingsLeft">
-                <img src="img/groupTrainings.png" alt="">
+                <picture>
+                    <source srcset="img/mobile/groupTrainings.png" media="(max-width: 560px)">
+                    <img src="img/groupTrainings.png" alt="" />
+                </picture>     
             </div>
             <div class="groupTrainingsRight">
                 <span>Top service</span>
@@ -430,7 +431,7 @@
         </footer>
     </main>
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="script/slider.js"></script>
     <script src="script/menu.js"></script>
     <script src="script/burger-icon.js"></script>

@@ -5,6 +5,7 @@ $('.media').slick({
     slidesToShow: 4.5,
     slidesToScroll: 1,
     variableWidth: true,
+    lazyLoad: 'progressive',
     responsive: [
       {
         breakpoint: 1024,
