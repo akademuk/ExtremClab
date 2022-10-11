@@ -67,54 +67,15 @@ a {
     width: 100vw;
     object-fit: cover;
 }
-/* .board {
-    margin-top: 200px;
-    background: url(../img/art2.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    height: 500px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-.positionTittle {
-    position: absolute;
-    top: -200px !important;
-    right: 22% !important;
-}
-.boardContainer > p {
-    font-family: 'Fira Sans Extra Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 140%;
-    text-align: center;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
-.boardContainer {
-    display: flex;
-    justify-content: flex-start;
-    width: 85%;
-}
-.boardContainer img {
-    position: absolute;
-        top: -230px;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        text-align: center;
-        z-index: -1;
-} */
+
 .background {
-    background: url(../img/MainArt.png);
+    /* background: url(../img/MainArt.png); */
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     background-position: bottom;
     position: relative;
+    background: #042E3B;
 }
 h2 {
     font-family: 'Fira Sans Extra Condensed', sans-serif;
