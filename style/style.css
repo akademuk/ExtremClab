@@ -250,7 +250,7 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    z-index: -1;
+    z-index: 1;
 }
 .card::after {
     content: "";
@@ -935,6 +935,8 @@ h3 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
+    z-index: 1;
 }
 .stagesOfWork .stagesContainer:nth-of-type(3) {
     right: 0;
@@ -1170,6 +1172,7 @@ h3 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    z-index: 1;
 }
 .aboutAs .wrapper{
     max-width: 1312px;
@@ -1574,7 +1577,7 @@ h3 {
         margin-right: 16px;
         font-size: 12px;
     }
-.groupTrainings {
+.groupTrainings .wrapper{
     width: 90%;
 }
 .stagesOfWork .wrapper {
@@ -1639,7 +1642,7 @@ content: none;
 .card > .wrapper::after {
     content: none;
 }
-.groupTrainings {
+.groupTrainings .wrapper{
     flex-direction: column;
 }
 .groupTrainingsLeft {
@@ -1652,7 +1655,7 @@ content: none;
 .cardContainer {
     margin-bottom: 0;
 }
-.groupTrainings {
+.groupTrainings .wrapper{
     width: 90%;
 }
 .positionNumber {
@@ -1808,7 +1811,7 @@ content: none;
 .book-now {
     width: 40%;
 }
-.groupTrainings {
+.groupTrainings .wrapper{
     width: 90%;
 }
 .groupTrainingsLeft {
@@ -1876,6 +1879,9 @@ main::after {
 }
 .topContainerMain {
     padding-right: 0;
+}
+.slider::after {
+    content: none;
 }
 }
 @media(max-width: 576px) {
@@ -2159,7 +2165,7 @@ header {
 .card {
     padding-top: 70px;
     padding-bottom: 0;
-    margin-bottom: 64px;
+    padding-bottom: 64px;
 }
 .card .wrapper h2 {
     margin-bottom: 64px;
@@ -2194,7 +2200,7 @@ h2 {
 .cardContainer {
     margin-bottom: 0;
 }
-.groupTrainings {
+.groupTrainings .wrapper{
     width: 90%;
 }
 .btnPrice button {
@@ -2238,7 +2244,7 @@ header {
 .cardContainer {
     margin-bottom: 0;
 }
-.groupTrainings {
+.groupTrainings .wrapper{
     width: 100%;
     padding: 0 16px;
 }
@@ -2359,8 +2365,8 @@ h2 {
 
 .aboutAs {
     height: 100%;
-    padding-bottom: 0;
-    margin-bottom: 72px;
+    margin-bottom: 0;
+    padding-bottom: 72px;
 }
 .card::after {
    content: none;
@@ -2373,5 +2379,8 @@ h2 {
 }
 .topContainerMain > button {
     bottom: 2vh !important;
+}
+.aboutPosition {
+    margin-top: 150px;
 }
 }
