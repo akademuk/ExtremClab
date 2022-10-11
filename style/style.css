@@ -76,8 +76,8 @@ a {
     background: url(../img/MainArt.png);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
-    background-position: bottom;
+    height: auto;
+    background-position: center;
     position: relative;
 }
 h2 {
@@ -1014,6 +1014,7 @@ h3 {
     background: url(../img/Slice5.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 .slider::after {
     content: "";
@@ -1168,7 +1169,7 @@ h3 {
     background: url(../img/Slice7.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left;
+    background-position: center;
 }
 .aboutAs .wrapper{
     max-width: 1312px;
@@ -1232,13 +1233,13 @@ h3 {
     background: url(../img/Slice8.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left;
+    background-position: center;
 }
 .slice {
     background: url(../img/Slice9.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left;
+    background-position: center;
 }
 .equipment .wrapper {
     max-width: 1315px;
@@ -1671,6 +1672,13 @@ content: none;
 }
 }
 @media (max-width: 992px) {
+.background {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    position: relative;
+}
 .aboutPosition {
     font-size: 150px;
 }
@@ -1872,10 +1880,13 @@ main::after {
 }
 @media(max-width: 576px) {
 .background {
-    height: 100vh;
+    height: 70vh;
     background: url(../img/mobile/MainArt2.png);
     background-repeat: no-repeat;
     background-size: cover;
+}
+.topContainer {
+    height: 60vh;
 }
 .slider h2 {
     margin-bottom: 64px;
@@ -1932,7 +1943,7 @@ main::after {
     justify-content: center;
 }
 .topContainerMain > button {
-    bottom: 15vh;
+    bottom: 2vh;
 }
 .equipmentBoard {
     padding: 0;
@@ -2297,13 +2308,15 @@ header {
     background-size: contain;
 }
 }
-@media (max-width: 374px) {
+@media (max-width: 375px) {
 .cardContainer {
     flex-direction: column;
     align-items: center;
 }
 .background {
+    height: 100vh;
     background: url(../img/mobile/MainArt.png);
+    background-size: cover;
 }
 .stagesContainer {
     height: 250px;
@@ -2351,5 +2364,14 @@ h2 {
 }
 .card::after {
    content: none;
+}
+.topContainerMain {
+    height: 85vh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.topContainerMain > button {
+    bottom: 2vh !important;
 }
 }
