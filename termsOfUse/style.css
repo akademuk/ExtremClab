@@ -507,11 +507,12 @@ input {
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: #FFFFFF;
-    width: 133px;
+    width: 133px !important;
     height: 40px;
     border: 3px solid #FFFFFF;
     border-radius: 12px;
     background: transparent;
+    padding: 0 !important;
 }
 input ::placeholder {
     font-family: 'Fira Sans Extra Condensed', sans-serif;
@@ -565,6 +566,7 @@ h4 {
     display: flex;
     padding: 0 64px;
     margin-bottom: 65px;
+    padding-bottom: 100px;
 }
 .contentContainerLeft {
     display: flex;
@@ -603,7 +605,7 @@ h4 {
     color: #FFFFFF;
     margin-bottom: 16px;
 }
-.contentContainerLeft p:nth-of-type(2) {
+.contentContainerLeft span:nth-of-type(2)::after {
     content: "( printed name of invitee )";
     font-weight: 275;
     font-size: 14px;
@@ -619,12 +621,270 @@ h4 {
     color: #FFFFFF;
     margin-bottom: 16px;
 }
+.contentContainerRight span:nth-of-type(2)::after {
+    content: "(printed name of the person signing the Release)";
+    font-weight: 275;
+    font-size: 14px;
+    line-height: 17px;
+    display: block;
+    color: #FFFFFF;
+}
 .contentContainer {
     position: relative;
     margin-top: 64px;
 }
 .contentContainerBtn {
     position: absolute;
+    bottom: -55px;
+    background: #ABE1D8;
+    border-radius: 24px;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #041210;
+    width: 243px;
+    height: 85px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.close {
+    width: 100 !important;
+}
+.menuRight {
+    width: 510px;
+    height: 100vh;
+    right: -100%;
+    top: 0;
+    position: fixed;
+    background: #042E3B;
+    backdrop-filter: blur(50px);
+    transition: 0.7s;
+    z-index: 200;
+    padding: 2vh 64px 2vh 24px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    box-sizing: border-box;
+  }
+.open_menu {
+    right: 0;
+}
+.menu .close {
+    text-align: end;
+    margin-left: auto;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+.menuRight > .close {
+    text-align: end;
+    margin-left: auto;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+.menuForm {
+    margin-top: 2vh;
+    width: 100%;
+    display: block !important;
+}
+.menuContent h2 {
+    padding-left: 0;
+    margin-bottom: 0 !important;
+}
+.menuForm label {
+    display: block;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+.menuForm label::after {
+    content: "*";
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    color: #E06D1A;
+    margin-left: 3px;
+    position: static !important;
+}
+.menuForm input {
+    width: 100%;
+    padding: 8px 11px;
+    width: 421px;
+    height: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 0px 1px #CDD1DC;
+    border-radius: 6px;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+.menuForm input::placeholder {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.menuForm p{
+    margin-top: 16px;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 16px;
+}
+.popup__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    background: url(../img/popup2.png), url(../img/popup1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    pointer-events: none; 
+    transition: 0.5s all;
+    z-index: 100;
+}
+.closePopup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 99;
+    padding: 0 !important;
+    border: none !important;
+}
+.popup__bg::after {
+    content: "";
+    background: url(../img/popap3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: overlay;
+}
+.popup__bg.active { 
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); 
+    width: max-content;
+    padding: 25px;
+    transition: 0.5s all;
+}
+.popup.active { 
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s all;
+}
+.close-popup {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 16px 48px;
+    border: 3px solid #FFFFFF;
+    border-radius: 12px;
+    background: transparent;
+}
+.popupContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.popupContent p:nth-of-type(1) {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 140%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+.popupContent p:nth-of-type(2) {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+     margin-bottom: 16px;
+}
+#checkbox1, #checkbox2 {
+    width: max-content;
+    height: max-content;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    box-shadow: none;
+    display: inline !important;
+}
+.labelChec{
+    display: inline !important;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+.labelChec span {
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 1px;
+    color: #1B4AF0;
+}
+.submit {
+    margin-top: 70px;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #FFFFFF !important;
+    padding: 16px 48px;
+    border: 3px solid #FFFFFF;
+    border-radius: 12px;
+    width: 100%;
+    background: transparent !important;
 }
 @media (max-width: 1440px) {
 .header {
@@ -639,9 +899,22 @@ h4 {
     left: 65px;
 }
 }
+@media (max-width: 1300px) {
+form {
+    flex-direction: column;
+    align-items: center !important;
+    max-width: 100%;
+}
+input {
+    margin-bottom: 30px;
+}
+}
 @media (max-width: 1200px) {
 .navigation li {
     margin-right: 12px;
+}
+.formContract {
+    padding: 0 65px;
 }
 .mainContent {
     padding-left: 0;
@@ -734,6 +1007,52 @@ footer .toggle {
     width: 66px;
     height: 60px;
 }
+.formContract {
+    padding: 0 16px;
+}
+.mainContent p {
+    font-weight: 300;
+    word-break: break-all;
+}
+.conentMain {
+    padding: 0 16px !important;
+}
+.contentWidht {
+    padding: 32px;
+}
+.contentContainer {
+    padding: 0 16px 100px 16px;
+    flex-direction: column;
+}
+.contentContainerLeft {
+    width: 100%;
+}
+.contentContainerRight {
+    width: 100%;
+}
+.padding {
+    padding: 0;
+}
+input {
+    width: 90%;
+    min-width: 90%;
+}
+label {
+    width: 90%;
+    min-width: 90%;
+}
+form label::after {
+    content: none;
+}
+.formContract h2 {
+    padding: 0 16px;
+}
+
+.contactText span{
+    display: block;
+    margin-left: 0;
+    margin-top: 8px;
+}
 .logo a{
     width: 66px;
     height: 60px;
@@ -775,5 +1094,14 @@ main {
 }
 .mainContent {
     padding-right: 0;
+}
+.menuRight {
+    width: 100%;
+}
+.menuRight {
+    padding: 20px;
+}
+.menuForm > input {
+    max-width: 90%;
 }
 }
