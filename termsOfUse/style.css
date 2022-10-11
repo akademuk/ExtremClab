@@ -8,6 +8,8 @@ body {
     font-style: normal;
     font-size: 16px;
     color: #FFFFFF;
+    scroll-behavior: smooth;
+    position: relative;
 }
 .overflow {
     overflow: hidden;
@@ -15,7 +17,7 @@ body {
 .bodyActive {
     overflow: hidden;
 }
-.body::after {
+.backgroundBody{
     content: "";
     background: url(../img/terms3.png);
     background-repeat: no-repeat;
@@ -38,6 +40,24 @@ body {
     overflow: hidden;
     position: relative;
     z-index: 1;
+}
+.menu > .toggle button {
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: transparent;
+    border: none;
+}
+.menu > .toggle button:nth-of-type(2) {
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: transparent;
+    border: none;
 }
 .logo {
     width: 110px;
@@ -368,7 +388,6 @@ main{
     margin-top: 130px;
     padding-left: 64px;
     position: relative;
-    z-index: 1;
 }
 .mainContent {
     padding: 0 175px;

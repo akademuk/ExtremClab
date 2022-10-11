@@ -73,31 +73,31 @@
                     </div>
                     <ul class="navigaton">
                         <li>
-                            <a href="#">Home</a>
+                            <a href="#home" class="linkClose">Home</a>
                         </li>
                         <li>
-                            <a href="#">About us</a>
+                            <a href="#aboutAs" class="linkClose">About us</a>
                         </li>
                         <li>
-                            <a href="#">Services</a>
+                            <a href="#card" class="linkClose">Services</a>
                         </li>
                         <li>
-                            <a href="#">Stages of work</a>
+                            <a href="#stagesOfWork" class="linkClose">Stages of work</a>
                         </li>
                         <li>
-                            <a href="#">Reviews</a>
+                            <a href="#reviews" class="linkClose">Reviews</a>
                         </li>
                         <li>
-                            <a href="#">Our equipment</a>
+                            <a href="#equipment" class="linkClose">Our equipment</a>
                         </li>
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="#contactUs" class="linkClose">Contact</a>
                         </li>
                         <li>
                             <a href="termsOfUse/index.html">Terms of use</a>
                         </li>
                         <li>
-                            <a href="#">standard contract</a>
+                            <a href="contract/index.html">standard contract</a>
                         </li>
                     </ul>
                     <div class="toggle">
@@ -171,8 +171,8 @@
         </div>
     </div>
     <main>
-        <!-- <img src="img/3.png" alt="" class="mainBackground"> -->
         <div class="mainPosition">
+        </div>
         <div class="card" id="card">
             <!-- <img src="img/map.png" alt="" class="mapBackground"> -->
             <div class="wrapper">
@@ -409,7 +409,7 @@
                     <a href="termsOfUse/index.html">Terms of use</a>
                 </li>
                 <li>
-                    <a href="#">standard contract</a>
+                    <a href="contract/index.html">standard contract</a>
                 </li>
             </ul>
             <div class="footerToggle">
@@ -428,7 +428,6 @@
                 </a>
             </div>
         </footer>
-       </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -438,5 +437,68 @@
     <script src="script/burger.js"></script>
     <script src="script/closeBurger.js"></script>
     <script src="script/popup.js"></script>
+    <script>
+        jQuery('a[href*="#"]')
+        // Remove links that don't actually link to anything
+          .not('[href="#"]')
+          .not('[href="#0"]')
+          .on('click', function(event) {
+          event.preventDefault();
+          // On-page links
+          var _this = jQuery(this), id = _this.attr('href').substring(_this.attr('href').indexOf('#'));
+  
+          if(jQuery(id).length > 0) {
+  
+            // Figure out element to scroll to
+            var target = jQuery(this.hash);
+            target = target.length ? target : jQuery('[name=' + this.hash.slice(1) + ']');
+  
+            // Does a scroll target exist?
+            if (target.length) {
+              // Only prevent default if animation is actually gonna happen
+              event.preventDefault();
+              jQuery('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000, function() {
+  
+              });
+            }
+  
+          } else {
+            window.location.href = _this.attr('href');
+          }
+  
+        });
+  
+        var target = window.location.hash;
+  
+        // delete hash so the page won't scroll to it
+        window.location.hash = "";
+  
+        // now whenever you are ready do whatever you want
+        // (in this case I use jQuery to scroll to the tag after the page has loaded)
+        $(window).on('load', function() {
+          if (jQuery(target).length) {
+            $('html, body').animate({
+              scrollTop: jQuery(target).offset().top
+            }, 700, 'swing', function () {});
+          }
+        });
+  
+  
+        jQuery(function(){
+  
+          if(jQuery(target).length > 0) {
+  
+            jQuery('html, body').animate({
+              scrollTop: jQuery(target).offset().top
+            }, 1000, function() {
+              history.pushState(null,null, target);
+            });
+          }
+  
+          return false;
+        });
+      </script>
 </body>
 </html>

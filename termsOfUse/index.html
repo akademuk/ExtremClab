@@ -10,6 +10,16 @@
     <title>Terms of use</title>
 </head>
 <body class="body">
+    <div class="popup__bg"> 
+        <img src="../img/closeIcon.png" alt="" class="close-popup closePopup">
+        <div class="popup">
+            <div class="popupContent">
+                <p>Thank you!</p>
+                <p>Your application has been sent</p>
+                <button class="close-popup">To main page</button>
+            </div>
+        </div>
+    </div>  
     <header class="header">
         <div class="logo">
             <a href="#">
@@ -44,7 +54,7 @@
                 <button class="btnActive">EN</button>
                 <button>SP</button>
             </div>
-            <button class="book">BOOK NOW</button>
+            <button class="book open">BOOK NOW</button>
         </div>
         <div class="burger">
             <div class="box-container">
@@ -63,36 +73,36 @@
                 </div>
                 <ul class="navigaton">
                     <li>
-                        <a href="#">Home</a>
+                        <a href="../index.html" class="linkClose">Home</a>
                     </li>
                     <li>
-                        <a href="#">About us</a>
+                        <a href="../index.html#aboutAs" class="linkClose">About us</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="../index.html#card" class="linkClose">Services</a>
                     </li>
                     <li>
-                        <a href="#">Stages of work</a>
+                        <a href="../index.html#stagesOfWork" class="linkClose">Stages of work</a>
                     </li>
                     <li>
-                        <a href="#">Reviews</a>
+                        <a href="../index.html#reviews" class="linkClose">Reviews</a>
                     </li>
                     <li>
-                        <a href="#">Our equipment</a>
+                        <a href="../index.html#equipment" class="linkClose">Our equipment</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="./index.html#contactUs" class="linkClose">Contact</a>
                     </li>
                     <li>
-                        <a href="#">Terms of use</a>
+                        <a href="../termsOfUse/index.html">Terms of use</a>
                     </li>
                     <li>
-                        <a href="#">standard contract</a>
+                        <a href="../contract/index.html">standard contract</a>
                     </li>
                 </ul>
                 <div class="toggle">
                     <button class="btnActive">EN</button>
-                    <button>SP</button>
+                    <button >SP</button>
                 </div>
                  <div class="socialIcon">
                 <a href="#">
@@ -106,6 +116,31 @@
                 </a>
                 </div>
                 <p>© 2022 Extreme 101 Club. All rights reserved. </p>
+            </div>
+        </div>
+        <div class="menuRight">
+            <div class="close">
+                <img src="../img/closeIcon.png" alt="close">
+            </div>
+            <div class="menuContent">
+                <h2>Service order</h2>
+                <form class="menuForm">
+                    <label for="name">Client name</label>
+                    <input type="text" name="" id="name" placeholder="Your Name">
+                    <p>Enter the full name of the person who will receive the service</p>
+                    <label for="email">Email</label>
+                    <input type="email" name="" id="email" placeholder="Your Email">
+                    <p>Enter your email, a confirmation email will be sent to it</p>
+                    <label for="tel">Telephone number</label>
+                    <input type="tel" name="" id="tel" placeholder="Your Telefone">
+                    <p>Enter customer phone</p>
+                    <input type="checkbox" id="checkbox1">
+                    <label for="checkbox1" class="labelChec">Confirm your agreement with<span> the terms of service</span> </label>
+                    <br>
+                    <input type="checkbox" id="checkbox2">
+                    <label for="checkbox2" class="labelChec">Read and confirm your agreement with the terms of the <span> contract </span>for the provision of services</label>
+                    <input type="submit" value="Send" class="submit open-popup close">
+                </form>
             </div>
         </div>
     </header>
@@ -139,7 +174,7 @@
                 <a href="../termsOfUse/index.html" class="activeColors">Terms of use</a>
             </li>
             <li>
-                <a href="#">standard contract</a>
+                <a href="../contract/index.html">standard contract</a>
             </li>
         </ul>
         <div class="toggle">
@@ -162,5 +197,7 @@
     <script src="../script/burger-icon.js"></script>
     <script src="../script/burger.js"></script>
     <script src="../script/closeBurger.js"></script>
+    <script src="../script/menu.js"></script>
+    <script src="../script/popup.js"></script>
 </body>
 </html>
