@@ -2375,6 +2375,9 @@ main::after {
     display: block;
     min-height: 1400px;
 }
+.lodka {
+    
+}
 .topContainerMain > button {
     top: 400px;
     bottom: auto;
