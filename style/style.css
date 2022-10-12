@@ -1493,7 +1493,7 @@ h3 {
     text-transform: uppercase;
     color: #FFFFFF;
     position: absolute;
-    top: 45%;
+    top: 30%;
     left: 15%;
 }
 .board {
@@ -1893,6 +1893,12 @@ h3 {
     width: 90%;
     margin: 50px auto 0 auto;
 }
+.navigaton li a {
+    font-size: 15px;
+}
+header {
+    padding: 3vh 34px 0 34px;
+}
 }
 @media (min-width:1440px) {
 .card > .wrapper::before {
@@ -1917,7 +1923,7 @@ h3 {
         width: 24%;
     }
     .card .wrapper {
-        width: 90%;
+        width: 100%;
     }
     .navigaton li a {
         margin-right: 16px;
@@ -1959,6 +1965,11 @@ h3 {
 }
 .burger {
     display: block !important;
+    margin-right: 20px;
+}
+.book-now {
+    margin-left: auto;
+    margin-right: 35px;
 }
 .background{
     height: max-content;
@@ -2246,6 +2257,10 @@ content: none;
 }
 .contactUsContentRight button {
     position: static !important;
+}
+.btnPrice button {
+    margin-right: auto;
+    margin-left: 0;
 }
 }
 @media (max-width: 768px) {
@@ -2733,7 +2748,18 @@ header {
     border-radius: 8px;
     margin-top: 16px;
     background: transparent;
+    display: block !important;
+}
+.cardContainerInfo:hover {
+    transform: scaleY(1);
+}
+.cardContainerInfo:hover .book-now.open.hoverBtn {
     display: none !important;
+}
+.cardinfo p:nth-of-type(2) {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
 }
 .menuRight {
     width: auto;
