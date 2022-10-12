@@ -196,13 +196,8 @@ header .book-now.open:hover {
 }
 .open {
     position: relative;
-    color: #D1C4E9;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: #D1C4E9 1px 0 10px;
-    border: solid 1px #D1C4E9;
-    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,6 +208,7 @@ header .book-now.open:hover {
     content: '';
     position: absolute;
     background: #248F7E;
+    border: 1px solid #248F7E;
     width: 0;
     height: 0;
     z-index: -1;
@@ -221,7 +217,7 @@ header .book-now.open:hover {
     transition: all 900ms cubic-bezier(1.000, -0.195, 0.000, 1.330);
     transition-timing-function: cubic-bezier(1.000, -0.195, 0.000, 1.330);
   }
-  .open:hover::after {
+  .open:hover .afterBtn {
     background: transparent;
   } 
   .open:hover:before {
@@ -330,18 +326,17 @@ header .book-now.open:hover {
     text-align: center;
     z-index: 3;
 }
-.topContainerMain > button::after {
+.afterBtn {
     position: absolute;
-    content: "";
     display: flex;
     width: 100%;
     height: 31.2px;
     background: #ABE1D8;
     filter: blur(7.5px);
     left: 5px;
-    top: 40px;
+    top: 50px;
     border-radius: 50%;
-    z-index: -1;
+    z-index: -2;
 }
 .card {
     position: relative;
@@ -406,19 +401,28 @@ header .book-now.open:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    filter: drop-shadow(0px 0px 0px rgba(3, 29, 38, 0.02)) drop-shadow(0px 0px 0px rgba(3, 29, 38, 0.15)) drop-shadow(0px 9px 0px rgba(3, 29, 38, 0.5)) drop-shadow(0px 11px 11px rgba(3, 29, 38, 0.85)) drop-shadow(0px 3px 6px rgba(3, 29, 38, 0.98)) drop-shadow(0px 0px 0px #031D26)
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.4));
 }
 .cardinfo p{
     font-family: 'Fira Sans Extra Condensed', sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 1px;
     color: #FFFFFF;
 }
+.cardinfo p:nth-of-type(1) {
+    min-height: 130px;
+}
 .cardinfo p:nth-of-type(2) {
-   text-align: right;
-   margin-top: 16px;
+    text-align: right;
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 140%;
+    text-align: right;
+    letter-spacing: 1px;
+    color: #FFFFFF;
 }
 h3 {
     font-family: 'Fira Sans Extra Condensed', sans-serif;
@@ -1645,6 +1649,20 @@ h3 {
     background: #ABE1D8;
     filter: blur(7.5px);
     border-radius: 50%;
+}
+@media (min-width:1500px) {
+.cardContainer {
+    max-width: 1440px;
+}  
+.card > .wrapper::before {
+    right: -8% !important;
+}
+.card > .wrapper::after {
+    left: -8% !important;
+}
+.card::after {
+    bottom: -200px;
+}
 }
 @media (max-width:1440px) {
 .card > .wrapper::before {
