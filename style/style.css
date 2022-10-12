@@ -2180,7 +2180,7 @@ content: none;
     height: 500px;
     align-items: flex-start;
 }
-.groupTrainings {
+/* .groupTrainings {
     background: url(../img/992Slice2.png);
     background-position: center;
     background-size: cover;
@@ -2222,7 +2222,7 @@ content: none;
     background-repeat: no-repeat;
     min-height: 100%;
     height: 100%;
-}
+} */
 .board img {
     max-width: 50%;
 }
@@ -2476,9 +2476,6 @@ main::after {
 .aboutPosition {
     font-size: 80px;
     margin-top: 165px;
-}
-.aboutAs {
-    padding-top: 50px;
 }
 .reviews {
     background-position: bottom;
@@ -2817,7 +2814,6 @@ header {
     background-size: contain;
 }
 .equipment  {
-    padding-bottom: 100px;
     height: 100%;
 }
 .boardTittle {
