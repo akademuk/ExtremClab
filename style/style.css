@@ -2170,13 +2170,73 @@ content: none;
     background-position: bottom;
 }
 .background {
-    background: url(../img/992.png);
+    background: url(../img/992Slice1.png);
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 1940px;
 }
 .topContainer {
     height: 500px;
+    align-items: flex-start;
+}
+.groupTrainings {
+    background: url(../img/992Slice2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 850px;
+}
+.stagesOfWork {
+    background: url(../img/992Slice3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 400px;
+}
+.slider {
+    background: url(../img/992Slice3.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 590px;
+}
+.reviews {
+    background: url(../img/992Slice4.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 540px;
+}
+.aboutAs {
+    background: url(../img/992Slice5.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 540px;
+}
+.equipment {
+    background: url(../img/992Slice6.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    height: 100%;
+}
+.board img {
+    max-width: 50%;
+}
+.card {
+    margin-top: 0;
+}
+.topContainerSidebar {
+    height: 40%;
+}
+.topContainerMain  {
+    margin-top: 215px;
+}
+.topContainerMain > button {
+    top: 590px;
 }
 }
 @media (max-width: 768px) {
@@ -2262,6 +2322,7 @@ main::after {
 }
 .topContainerMain {
     padding-right: 0;
+    margin-top: 100px;
 }
 .slider::after {
     content: none;
@@ -2271,6 +2332,10 @@ main::after {
 }
 .equipment {
     background-position: bottom;
+    height: auto;
+}
+.board img {
+    max-width: 50%;
 }
 .reviews {
     background-position: top;
@@ -2290,7 +2355,7 @@ main::after {
     z-index: 1;
 }
 .topContainerMain > button {
-    top: 400px;
+    top: 450px;
 }
 .card {
     padding-top: 100px;
@@ -2322,6 +2387,7 @@ main::after {
 }
 .topContainer {
     height: 465px;
+    align-items: center;
 }
 .slider h2 {
     margin-bottom: 64px;
@@ -2481,6 +2547,10 @@ main::after {
 .topContainerMain  {
     height: auto;
     justify-content: center;
+    margin-top: -85px;
+}
+.board img {
+    max-width: 50%;
 }
 .topContainerSidebar {
     display: none;
@@ -2764,6 +2834,15 @@ header {
     display: flex;
     justify-content: center;
 }
+.equipmentText {
+    flex-direction: column;
+}
+.equipmentText p {
+    width: 100%;
+}
+.book-now.open span {
+    display: none;
+}
 }
 @media (max-width: 375px) {
 .cardContainer {
@@ -2848,14 +2927,5 @@ h2 {
 }
 .topContainerMain {
     margin-top: 100px;
-}
-.book-now.open span {
-    display: none;
-}
-.equipmentText {
-    flex-direction: column;
-}
-.equipmentText p {
-    width: 100%;
 }
 }
