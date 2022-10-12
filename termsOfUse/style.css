@@ -388,9 +388,11 @@ main{
     margin-top: 130px;
     padding-left: 64px;
     position: relative;
+    max-width: 1312px;
+    margin: 130px auto 0 auto;
 }
 .mainContent {
-    padding: 0 175px;
+    padding: 0 64px;
     margin: 72px auto 0 auto;
     width: 100%;
     box-sizing: border-box;

@@ -27,7 +27,7 @@ body {
     align-items: center;
     color: #041210;
     border: none;
-    display: none;
+    display: none !important;
 }
 .hoverBtn::after {
     content: "";
@@ -49,7 +49,10 @@ body {
     transform: scaleY(1.1);
 }
 .cardContainerInfo:hover .hoverBtn{
-   display: flex;
+   display: flex !important;
+   background: #ABE1D8;
+   color: #000;
+   border: none;
 }
 
 a {
@@ -64,7 +67,7 @@ a {
     background-position: top;
 }
 .btnMobile {
-    display: none;
+    display: none !important;
 }
 .board {
     overflow: hidden;
@@ -111,6 +114,17 @@ header {
 .burger {
     display: none;
 }
+.book-now.open.hoverOpacity:hover {
+    background: rgba(255, 255, 255, 0.5) !important;
+    border: 3px solid rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(5px) !important;
+}
+.book-now.open.hoverOpacity:after {
+   content: none !important;
+}
+.book-now.open.hoverOpacity:before {
+   content: none !important;
+}
 header .book-now.open:hover {
     background: #248F7E !important;
     border-color: #248F7E !important;
@@ -120,9 +134,17 @@ header .book-now.open:hover {
     background: #248F7E !important;
     border: transparent !important;
     color: #fff !important;
+    border-radius: 24px !important;
+    border: none !important;
+    box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 50 !important;
 }
-.textHover:after {
-    background: #248F7E !important;
+.textHover span{
+    display: none;
+}
+.btnPrice button::after {
+    background: url(../img/lineWhite.svg);
 }
 .topContainer {
     display: flex;
@@ -208,7 +230,7 @@ header .book-now.open:hover {
     height: 0;
     z-index: -1;
     border-radius: 24px;
-    box-shadow: 0px 0px 24px 1px rgba(224,199,224,0.2);
+    box-shadow: inset 0px 4px 15px rgba(0, 0, 0, 0.5);
     transition: all 900ms cubic-bezier(1.000, -0.195, 0.000, 1.330);
     transition-timing-function: cubic-bezier(1.000, -0.195, 0.000, 1.330);
   }
@@ -220,7 +242,15 @@ header .book-now.open:hover {
     height: 100%;
   }
   .open:hover {
-    color: #fff;
+    color: #fff !important;
+    z-index: 50;
+    display: flex !important;
+  }
+  .hoverBtn:hover:after {
+    background: url(../img/lineWhite.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
   .open:active:before, .open:focus:before {
     width: 100%;
@@ -292,7 +322,8 @@ header .toggle {
     background: transparent;
     padding: 16px 48px;
     border: 3px solid #FFFFFF;
-    border-radius: 12px;
+    border-radius: 24px;
+    display: flex;
 }
 .topContainerMain {
     width: 100%;
@@ -1025,6 +1056,12 @@ h3 {
     display: flex;
     margin-left: 7px;
 }
+.btnPrice button:hover::after {
+    background: url(../img/lineWhite.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 .btnPrice > p {
     font-family: 'Fira Sans Extra Condensed', sans-serif;
     font-weight: 700;
@@ -1116,6 +1153,32 @@ h3 {
    width: 100%;
    padding-bottom: 45px;
    position: relative;
+   z-index: 2;
+}
+.mediaContainer:nth-of-type(1):hover {
+    background:url(../img/video1.png);
+    background-blend-mode: unset;
+    cursor: pointer;
+}
+.mediaContainer:nth-of-type(2):hover {
+    background:url(../img/video2.png);
+    background-blend-mode: unset;
+    cursor: pointer;
+}
+.mediaContainer:nth-of-type(3):hover {
+    background:url(../img/video3.png);
+    background-blend-mode: unset;
+    cursor: pointer;
+}
+.mediaContainer:nth-of-type(4):hover {
+    background:url(../img/video4.png);
+    background-blend-mode: unset;
+    cursor: pointer;
+}
+.mediaContainer:nth-of-type(5):hover {
+    background:url(../img/video1.png);
+    background-blend-mode: unset;
+    cursor: pointer;
 }
 .slider {
     height: 624px;
@@ -1238,7 +1301,7 @@ h3 {
     border: none;
     color: transparent;
 }
-.mediaContainer img {
+.mediaContainer .svgPlay {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -1682,6 +1745,9 @@ h3 {
 .footerIcons a {
     text-decoration: none;
 }
+.footerIcons a:hover svg path {
+
+}
 .mapsPositionFooter {
     display: none;
 }
@@ -1738,7 +1804,6 @@ h3 {
     background-repeat: no-repeat;
     background-position: bottom;
     padding-bottom: 0;
-    background-position-x: -1px;
 }
 .groupTrainings {
     background: url(../img/1920Slice3.png);
@@ -2683,6 +2748,21 @@ header {
 }
 .equipment  {
     padding-bottom: 100px;
+    height: 100%;
+}
+.boardTittle {
+    display: none;
+}
+.sliceText {
+    display: none;
+}
+.slice {
+    max-height: 100% !important;
+    height: 100% !important;
+}
+.burgerLogo > .book-now {
+    display: flex;
+    justify-content: center;
 }
 }
 @media (max-width: 375px) {
@@ -2768,5 +2848,14 @@ h2 {
 }
 .topContainerMain {
     margin-top: 100px;
+}
+.book-now.open span {
+    display: none;
+}
+.equipmentText {
+    flex-direction: column;
+}
+.equipmentText p {
+    width: 100%;
 }
 }
